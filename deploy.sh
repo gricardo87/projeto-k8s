@@ -29,6 +29,7 @@ kubectl apply -f ./frontend/service.yaml
 
 # Aplicar recursos do ingress
 echo "Aplicando recursos do ingress..."
+sleep 30s;
 kubectl apply -f ./ingress.yaml
 
 echo "Deploy completo!"
