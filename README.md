@@ -17,7 +17,7 @@ Antes de iniciar, certifique-se de que você tem o seguinte instalado em sua má
 2. Execute o comando:
 
 ```bash
-git clobe https://github.com/gricardo87/projeto-k8s.git
+git clone https://github.com/gricardo87/projeto-k8s.git
 ```
 
 ## 2. Criação do Cluster & Deploy dos Manifestos.
