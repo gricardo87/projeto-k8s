@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: frontend-config
 data:
-  REACT_APP_BACKEND_URL: "http://frontend.seudominio.com"
+  REACT_APP_BACKEND_URL: "http://frontend.gabrielricardo.com"
