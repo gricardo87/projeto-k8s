@@ -11,33 +11,17 @@ Antes de iniciar, certifique-se de que você tem o seguinte instalado em sua má
 - [Minikube](https://minikube.sigs.k8s.io/docs/start/) 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 
 
-## 1. Criação do Cluster
-
-Para criar um cluster utilizando o Minikube, siga os passos abaixo:
+## 1. Criação do Cluster & Deploy dos Manifestos do projeto, usando o script localizado na raiz do projeto, chamado `deploy.sh`.
 
 1. Abra o terminal.
-2. Inicie o Minikube com o seguinte comando:
-
-   ```bash
-   minikube start
-   ```
-
-## 2. Deploy dos Manifestos
-
-Para realizar o deploy de todos os manifestos do projeto, utilize o script localizado na raiz do projeto, chamado `deploy.sh`. Este script executa as seguintes ações:
-
-- Cria o cluster com o Minikube.
-- Adiciona o addon de ingress no Minikube.
-- Aplica todos os manifestos do projeto.
-
-Para executar o script, utilize o comando:
+2. Execute o script:
 
 ```bash
 chmod +x deploy.sh
 ./deploy.sh
 ```
 
-## 3. Configuração do Ingress
+## 2. Configuração do Ingress
 
 Para testar o Ingress, é necessário criar uma entrada no arquivo de hosts local. Siga os passos abaixo:
 
@@ -60,6 +44,8 @@ Para testar o Ingress, é necessário criar uma entrada no arquivo de hosts loca
    ```
 
    Certifique-se de substituir `<IP_DO_MINIKUBE>` pelo endereço IP obtido no passo anterior.
+
+   Salve as alterações e reinicie o navegador.
 
 ## 4. Acessando a Aplicação
 
