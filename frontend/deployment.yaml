@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  annotations:
+    config.kubernetes.io/depends-on: apps/namespaces/default/Deployment/guess
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: gricardo87/aula-k8s:frontend
+          env:
+            - name: REACT_APP_BACKEND_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: frontend-config
+                  key: REACT_APP_BACKEND_URL
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: IfNotPresent

@@ -1,0 +1,15 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: postgres-pv
+  labels:
+    type: local
+    app: postgres
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 15Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/volumes/"
