@@ -89,6 +89,16 @@ Para testar o Ingress, é necessário criar uma entrada no arquivo de hosts loca
 
 Depois de seguir todos os passos acima, você poderá acessar sua aplicação em `http://frontend.gabrielricardo.com`. Certifique-se de que o Ingress está configurado corretamente e que os manifestos foram aplicados com sucesso.
 
-## 6. Conclusão
+## 6. Observação
+
+Nos deployments dos ambientes, foi adicionada a seguinte annotation:
+
+```yaml
+config.kubernetes.io/depends-on
+```
+
+Essa annotation permite definir dependências entre recursos, garantindo a ordem de inicialização dos ambientes. Com ela, podemos assegurar que os componentes são iniciados na sequência correta.
+
+## 7. Conclusão
 
 Você agora configurou com sucesso um ambiente Kubernetes local utilizando Minikube, implantou sua aplicação e configurou o Ingress para acessá-la. Para mais informações sobre o Kubernetes e o Minikube, consulte a documentação oficial.
