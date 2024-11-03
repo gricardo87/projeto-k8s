@@ -11,17 +11,27 @@ Antes de iniciar, certifique-se de que você tem o seguinte instalado em sua má
 - [Minikube](https://minikube.sigs.k8s.io/docs/start/) 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) 
 
-## 1. Criação do Cluster & Deploy dos Manifestos do projeto, usando o script localizado na raiz do projeto, chamado `deploy.sh`.
+## 1. Clone do repositório:
 
 1. Abra o terminal.
+2. Execute o comando:
+
+```bash
+git clobe https://github.com/gricardo87/projeto-k8s.git
+```
+
+## 2. Criação do Cluster & Deploy dos Manifestos.
+
+1. Abra o terminal dentro do repositório clonado anteriormente.
 2. Execute o script:
 
 ```bash
+cd projeto-k8s
 chmod +x deploy.sh
 ./deploy.sh
 ```
 
-## 2. Configuração do Ingress
+## 3. Configuração do Ingress
 
 Para testar o Ingress, é necessário criar uma entrada no arquivo de hosts local. Siga os passos abaixo:
 
@@ -47,10 +57,10 @@ Para testar o Ingress, é necessário criar uma entrada no arquivo de hosts loca
 
    Salve as alterações e reinicie o navegador.
 
-## 4. Acessando a Aplicação
+## 3. Acessando a Aplicação
 
 Depois de seguir todos os passos acima, você poderá acessar sua aplicação em `http://frontend.gabrielricardo.com`. Certifique-se de que o Ingress está configurado corretamente e que os manifestos foram aplicados com sucesso.
 
-## Conclusão
+## 4. Conclusão
 
 Você agora configurou com sucesso um ambiente Kubernetes local utilizando Minikube, implantou sua aplicação e configurou o Ingress para acessá-la. Para mais informações sobre o Kubernetes e o Minikube, consulte a documentação oficial.
